@@ -1,0 +1,17 @@
+//3-活动安排
+//默认第一个选中，从第二个开始往后遍历，若符合条件：s[j]>f[i],则bool置为true
+//以上说明，需要变量开始时间s[],结束时间f[],bool A[]
+template <class Type>
+void GreedySelector(Type s[],Type f[],bool A[]){
+    A[1]=true;
+    int j=1;//记录上一个选中的活动序号
+    for(int i=2;i<=n;i++){
+        if(s[i]>=f[j]){
+          A[i]=true;
+          j=i;
+        }
+        else{
+          A[i]=false;
+        }
+    }
+}
