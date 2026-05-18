@@ -1,6 +1,8 @@
 //3-活动安排
 //默认第一个选中，从第二个开始往后遍历，若符合条件：s[j]>f[i],则bool置为true
 //以上说明，需要变量开始时间s[],结束时间f[],bool A[]
+//O(n),结束时间排序O(nlogn)
+sort(f);
 template <class Type>
 void GreedySelector(Type s[],Type f[],bool A[]){
     A[1]=true;
